@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Indigenous Knowledge Preserver</title>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo" class="logo" width="400" height="200">
+        <h1>Indigenous Knowledge Preserver</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+                <li><a href="#archive">Archive</a></li>
+                <li><a href="#visualization">Visualization</a></li>
+                <li><a href="#premium">Premium Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#ai-section">Ask AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in">
+            <h2>About the Project</h2>
+            <p>This platform aims to digitally preserve indigenous languages, oral traditions, and ancient texts for future generations.</p>
+        </section>
+
+        <section id="contribute" class="fade-in">
+            <h2>Contribute Your Knowledge</h2>
+            <form id="contribute-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+                
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" accept=".txt,audio/*,video/*" required>
+                
+                <label for="author">Your Name:</label>
+                <input type="text" id="author" required>
+
+                <label for="language">Language:</label>
+                <select id="language" required>
+                    <option value="" disabled selected>Select Language</option>
+                    <option value="language1">Language 1</option>
+                    <option value="language2">Language 2</option>
+                    <option value="language3">Language 3</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="archive" class="fade-in">
+            <h2>Archive</h2>
+            <div id="archive-list"></div>
+        </section>
+
+        <section id="visualization" class="fade-in">
+            <h2>Data Visualization</h2>
+            <canvas id="contributionChart"></canvas>
+        </section>
+
+        <section id="premium" class="fade-in">
+            <h2>Premium Features</h2>
+            <p>Upgrade to our premium version for additional benefits:</p>
+            <ul>
+                <li>Access to exclusive content</li>
+                <li>Personalized feedback on your contributions</li>
+                <li>Advanced data analytics on contributions</li>
+                <li>Priority support from our team</li>
+            </ul>
+            <button id="premium-button">Upgrade Now!</button>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" required>
+                
+                <label for="contact-email">Email:</label>
+                <input type="email" id="contact-email" required>
+
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="ai-section" class="fade-in">
+            <h2>Ask Our AI</h2>
+            <div class="ai-chat">
+                <div id="ai-response" class="archive-item"></div>
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="ask-button">Ask</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indigenous Knowledge Preserver</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
